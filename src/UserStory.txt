@@ -1,0 +1,29 @@
+Home page ---1
+----
+Photo of the restaurant/logo/name
+our most popular dishes
+
+About---1
+- Information about the restaurant
+
+*************Menu
+- Categories: food families
+family ===> list all food having the same family
+foodList ==> foodCard ==> name,pic,price link==> add to cart
+Cart************
+
+
+userReducer
+productReducer
+orderReducer
+
+contact us---1
+email,phone,other addresses
+
+
+
+
+1: content + css
+
+// rafce ==> exported function based component
+// nfn ==> arrow function

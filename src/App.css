@@ -1,38 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Baloo+Tamma+2:wght@500&family=Roboto+Mono:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-image: url("imagerestau.jpg");
+} */
+
 .App {
-  text-align: center;
+  font-family: "Alata", sans-serif;
+  background-color: #cccccc;
+  height: 800px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Food-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+}
+.Food-card {
+  border-radius: 6px;
+  background: rgba(0, 139, 69, 0.164);
+  position: relative;
+  margin: 1rem;
+  width: 300px;
+  box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 5%);
+}
+.Food-card > img {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+/*Annimations */
+
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+
+.btn {
+  outline: 0;
+  margin: 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  background: rgb(88, 170, 129);
+  width: 100px;
+  border: 0.5px solid rgba(0, 0, 0, 0.37);
+  padding: 0.5rem 1rem;
+}
+.btn-danger {
   color: white;
+  background: rgb(211, 112, 112);
 }
 
-.App-link {
-  color: #61dafb;
+.btn-primary {
+  color: white;
+  background: rgb(77, 150, 113);
+}
+.btnN {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-command-btn {
+  background-color: #50af8c;
+  align-items: center;
+  width: 80%;
+  margin: 20px;
+} /* Green */
+.add-command-btn:hover {
+  background-color: #c0cac5;
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid rgb(0, 150, 100);
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+
+form {
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.76);
+  font-size: 20px;
+  width: calc(100vw / 1.8);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+form > input {
+  padding: 0.7em;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid rgb(153, 221, 187);
+  height: 50px;
+}
+form > label {
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.form > h1 {
+  color: rgb(196, 196, 46);
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.form > h3,
+.form > p {
+  color: rgb(0, 150, 100);
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.command-card {
+  border-radius: 6px;
+  background: rgba(223, 200, 176, 0.836);
+  position: relative;
+  margin: 3rem;
+  margin-top: 3rem;
+  width: 95%;
+}
+table1 {
+  background: rgb(235, 207, 207);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+table1 th,
+table1 td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  border: 3px solid purple;
+}
+
+.inp {
+  width: 430px;
+  border: 5px solid rgb(153, 221, 187);
+  border-radius: 50px;
+  height: 30px;
+}
+.inp:focus {
+  border-color: rgb(125, 219, 199);
+  outline: none;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive  */
+
+@media (min-width: 750px) {
+  form {
+    width: calc(100vw / 3);
   }
 }
